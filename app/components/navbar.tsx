@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -54,10 +55,11 @@ export default function Navbar() {
 
         <button onClick={() => scrollToSection('inicio')} className="focus:outline-none cursor-pointer">
           <div className="flex items-center justify-center h-12 w-12 overflow-visible">
-            <img
+            <Image
               src="/logo.png"
               alt="Logo"
-              className="h-12 w-auto scale-[2] select-none transition-transform"
+              width={48}  
+              height={48}
             />
           </div>
         </button>
