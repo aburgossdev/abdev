@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(
+      circle at top left,
+      rgba(0, 40, 80, 0.25) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 25, 60, 0.4) 0%,
+      transparent 60%
+    ),
+    linear-gradient(135deg, #0a1a2f, #16253f, #1e2f50);
+}
+
+/*=== NAVBAR ===*/
+
+
+.glass-navbar {
+  backdrop-filter: blur(1px);
+  background-color: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 1.3rem 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.glass-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background-color: #38bdf8; /* sky-400 */
+  transition: width 0.3s ease;
+}
+
+.glass-link:hover {
+  color: #38bdf8;
+}
+
+.glass-link:hover::after {
+  width: 100%;
+}
+
+
